@@ -35,7 +35,7 @@ Route::post('login', function (Request $request) {
         return response()->json(['message' => 'Credenciais inválidas'], 401);
     }
 
-    $token = $user->createToken('YourAppName')->accessToken;
+    $token = $user->createToken('ProvisionamentoDeDominio')->accessToken;
 
     return response()->json(['token' => $token]);
 });
